@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer | TMDB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MovieExplorer</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">People</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for movies...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover Your Next Favorite Movie</h2>
+                <p>Browse thousands of movies and TV shows from The Movie Database</p>
+            </div>
+        </section>
+
+        <section class="movie-section">
+            <h3>Popular Movies</h3>
+            <div class="filter-controls">
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                    <option value="">Action</option>
+                    <option value="">Romance</option>
+                    <option value="">Horror</option>
+                    <option value="">Thriller</option>
+                    <option value="">Sci-fiction</option>
+                    <option value="">Animated</option>
+                </select>
+                <select id="yearFilter">
+                    <option value="">All Years</option>
+                </select>
+                <select id="sortBy">
+                    <option value="popularity.desc">Popularity</option>
+                    <option value="vote_average.desc">Rating</option>
+                    <option value="release_date.desc">Newest</option>
+                </select>
+            </div>
+            <div id="movieGrid" class="movie-grid"></div>
+            <div class="pagination">
+                <button id="prevPage" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <span id="currentPage">1</span>
+                <button id="nextPage">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+        <p>&copy; 2023 MovieExplorer. All rights reserved.</p>
+    </footer>
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+
+</body>
+</html>
